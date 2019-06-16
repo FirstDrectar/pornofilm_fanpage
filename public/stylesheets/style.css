@@ -1,23 +1,9 @@
 .logo{
     width: 10%;
 }
-@media only screen and (max-width: 1280px) {
-    .logo{
-        width: 30%;
-    }
-  }
 .navbar {
     background-color: black;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
   html,
   body,
   .view {
@@ -34,8 +20,32 @@
   .carousel-inner {
     height: 100%;
   }
-  
-  
+  .btn {
+      background-color: #000000;
+  }
+  .btn:hover{
+      color:white;
+      background-color: #212121;
+  }
+
+
+
+  .my-main{
+    overflow: auto;
+    padding-bottom: 60px;
+  }
+  .sizer{
+    position: relative;;
+    margin-top: -60px;
+    clear: both;
+    height:60px;   /* Height of the footer */
+ 
+  }
+
+
+
+
+
   /* Chart.js */
  
   @-webkit-keyframes chartjs-render-animation {
@@ -53,11 +63,23 @@
     max-width: 33.333333%;
     margin-left: 33.333333%;
   }
+  .media-box{
+      
+    max-width: 33.333333%;
+
+  }
   @media screen and (max-width: 1280px) {
+    .logo{
+        width: 30%;
+    }
     .about-text{
         margin-left: 25%;
         max-width: 50%
-      }
+    }
+    .media-box{
+        max-width: 50%;
+    
+    }
   }
   @media screen and (max-width: 760px) {
     .about-text{
@@ -76,6 +98,14 @@
   footer{
       background-color:#000000;
   }
+ 
+   .media {
+      height: 300px;
+      padding: 10% 10% 10% 10%;
+  }
+  .media-container{
+      margin:  2% 2% 2% 2%;
+  }
   .chartjs-render-monitor {
     -webkit-animation: chartjs-render-animation 0.001s;
     animation: chartjs-render-animation 0.001s;
@@ -93,29 +123,72 @@
   
   .thumbnail {
     position: absolute;
-    top: 15px;
     bottom: 0;
-    transition: all 0.4s ease-in-out;
-    left: 15px;
-    right: 0;
+    transition: all 0.4s ease;
     text-align: center;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-top: calc(50% - 30px);
-    box-shadow: 0 0 10px rgba(94, 7, 208, 0.5)
   }
   
   .thumbnail:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 1);
+    transform: scale(1.5);
   }
   
-  .thumbnail:hover .bookTitle {
-    transform: scale(1.1);
-    color: #fff000;
-  }
+  table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .bookTitle {
     transition: all .5s;
     position: absolute;
@@ -211,6 +284,7 @@
     box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 1);
   
   }
+  
   .prettyLink{
     text-decoration: none;
     color: #34456a;
