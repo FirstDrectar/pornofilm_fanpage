@@ -18,74 +18,90 @@
 <body class="bg-dark" style="height: 100%">
     <div style="min-height: 100%">
         <div class="my-main">
-            <header>
-                <nav class="navbar navbar-expand navbar-dark scrolling-navbar fixed-top">
-                    <img class="logo img-fluid" src="/public/images/logo.png" alt="logo">
-                    <div class="collapse navbar-collapse" id="basicExampleNav">
-
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link waves-effect waves-light" href="/">Головна сторінка
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="/about">Про гурт</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="/photos">Галерея</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дадатково</a>
-                                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item waves-effect waves-light" href="/tours">Розклад турів</a>
-                                    <a class="dropdown-item waves-effect waves-light" href="/music">Музика</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="/booking">Квитки</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="/contacts">Контакти</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline">
-                            <div class="md-form my-0">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Пошук" aria-label="Search">
+                <header>
+                        <nav class="navbar navbar-expand-xl navbar-dark ">
+                            <img class="logo img-fluid" src="/public/images/logo.png" alt="logo">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="basicExampleNav">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link waves-effect waves-light" href="/">Головна сторінка
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link waves-effect waves-light" href="/about">Про гурт</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link waves-effect waves-light" href="/photos">Галерея</a>
+                                    </li>
+                
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дадатково</a>
+                                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item waves-effect waves-light" href="/tours">Розклад турів</a>
+                                            <a class="dropdown-item waves-effect waves-light" href="/music">Музика</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link waves-effect waves-light" href="/booking">Квитки</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link waves-effect waves-light" href="/contacts">Контакти</a>
+                                    </li>
+                                </ul>
+                                <form class="form-inline">
+                                    <div class="md-form my-0">
+                                        <input class="form-control mr-sm-2" type="text" placeholder="Пошук" aria-label="Search">
+                                    </div>
+                                </form>
+                
+                                <span class="navbar-nav">
+                                    <span class="nav-item">
+                                        <a class="nav-link waves-effect waves-light" href="/login">Вхід</a>
+                                    </span>
+                                </span>
+                
+                
                             </div>
-                        </form>
-
-                        <span class="navbar-nav">
-                            <span class="nav-item">
-                                <a class="nav-link waves-effect waves-light" href="/login">Вхід</a>
-                            </span>
-                        </span>
-
-
-                    </div>
-
-                </nav>
-            </header>
-
+                
+                        </nav>
+                    </header>
             <main class="body-test">
                 <section class="booking about text-white">
                     <div class="intro">
-
+                        <h1>БЛИЖАЙШИЕ КОНЦЕРТЫ</h1>
+                        <div class="offset-4 col-md-4">
+                            <p> Друзья! Доводим до вашего сведения, что только те концертные даты, которые вы видите на
+                                этом
+                                сайте, являются окончательно подтвержденными.
+                                Это означает, что:
+                                — Концерт состоится на 95%. Причиной отмены концерта в этом случае могут служить лишь
+                                обстоятельства непреодолимой силы.
+                                — Любой концерт «ПОРНОФИЛЬМОВ», анонсируемый (и даже усиленно рекламируемый) в вашем
+                                городе,
+                                не может считаться официально подтвержденным до тех пор, пока его дата не появится на
+                                официальном сайте группы.
+                                Будьте внимательны.
+                            </p>
+                        </div>
                     </div>
 
                     <table class="table text-white">
                         <thead class="black  ">
                             <tr>
-                                <th >Дата</th>
-                                <th >Місто</th>
-                                <th >Місце</th>
-                                <th >Купуй</th>
+                                <th>Дата</th>
+                                <th>Місто</th>
+                                <th>Місце</th>
+                                <th>Купуй</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th >12 июля 2019 , ПТ</th>
+                                <th>12 июля 2019 , ПТ</th>
                                 <td>Ярославль</td>
                                 <td>Фестиваль Доброфест</td>
                                 <td><button type="button" class="btn ">Купити</button></td>
@@ -98,8 +114,8 @@
                                 <td><button type="button" class="btn">Купити</button></td>
                             </tr>
                             <tr>
-                                <th >19 июля 2019 , ПТ	</th>
-                                <td>	Лагуново</td>
+                                <th>19 июля 2019 , ПТ </th>
+                                <td> Лагуново</td>
                                 <td>Фестиваль Улетай</td>
                                 <td><button type="button" class="btn ">Купити</button></td>
                             </tr>

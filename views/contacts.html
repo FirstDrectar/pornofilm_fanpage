@@ -15,8 +15,10 @@
     <link href="/public/stylesheets/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark">
-        <header>
+<body class="bg-dark" style="height: 100%">
+    <div style="min-height: 100%">
+        <div class="my-main">
+            <header>
                 <nav class="navbar navbar-expand-xl navbar-dark ">
                     <img class="logo img-fluid" src="/public/images/logo.png" alt="logo">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -35,7 +37,7 @@
                             <li class="nav-item">
                                 <a class="nav-link waves-effect waves-light" href="/photos">Галерея</a>
                             </li>
-        
+
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дадатково</a>
@@ -56,68 +58,56 @@
                                 <input class="form-control mr-sm-2" type="text" placeholder="Пошук" aria-label="Search">
                             </div>
                         </form>
-        
+
                         <span class="navbar-nav">
                             <span class="nav-item">
                                 <a class="nav-link waves-effect waves-light" href="/login">Вхід</a>
                             </span>
                         </span>
-        
-        
+
+
                     </div>
-        
+
                 </nav>
             </header>
 
-    <main>
-        <div class="d-flex flex-column text-white">
-            <img src="/public/images/media/about.jpg" class=" about mx-auto d-block align-middle"alt="about">
-            <div class="flex-column about-text">
-                <p class="text-center">
-                    «ПОРНОФИЛЬМЫ» — молодая и при этом самая политизированная панк-группа в России. В музыкальном плане
-                    —
-                    это мелодичный, простой и понятный панк-рок. В плане смысловой нагрузки — это максимально
-                    прямолинейные,
-                    при том ироничные и ядовитые тексты, называющие вещи своими именами.
-                </p>
-                <p class="text-center">
-                    «ПОРНОФИЛЬМЫ» — это панк-рок в лучших традициях Dead Kennedys, Bad Religion, ранних The Offspring,
-                    Pennywise, Anti-Flag, грамотно и кропотливо адаптированный под русский менталитет. Каждое
-                    выступление
-                    группы, словно последнее: полная самоотдача, энергетический взрыв и полное погружение в безумие.
-                </p>
-                <p class="text-center">
-                    Группа существует с 2008 года и за свою карьеру выпустила более 10 релизов различной
-                    продолжительности,
-                    а альбом «Молодость и панк-рок» вывел группу в топ среди коллективов их направления.
-                </p>
-                <p class="text-center"> Гастрольный график ансамбля насчитывает более 30 городов за сезон, а концерты в
-                    столицах проходят при полных аншлагах.
-                </p>
-                <p class="text-center"> Примечательно, что все участники коллектива вегетарианцы, не употребляют
-                    алкоголь,
-                    наркотики, не курят.
-                </p>
-                <p class="text-center">
-                    Хочется отметить, что абсолютно все релизы группы за 7 лет были записаны собственными силами в
-                    гараже в
-                    подмосковном городе Дубна. Пройдя путь от записей «подвального» качества, сейчас группа выдает такой
-                    звук на пластинках, которому могут позавидовать многие «студийные» артисты.
-                </p>
-            </div>
+            <main class="text-white about">
+                <div class="offset-md-4 col-md-4 offset-sm-2 col-sm-8 text-center">
+                    <h1>Контакти</h1>
+                    <p>Александр Русаков</p>
+                    <img src="/public/images/contacts_btn/star.png" alt="star">
+                    <p> Организация концертов</p>
+                    <img src="/public/images/contacts_btn/phone.png" alt="phone">
+                    <p>+7 (920) 183-28-80</p>
+                    <img src="/public/images/contacts_btn/mail.png" alt="mail">
+                    <p>farpstyle@rambler.ru</p>
+                    <h1>Гурт в соціальних мережах</h1>
+                    <div >
+                        <a href="https://vk.com/pornopunk" target="_blank" rel="noopener noreferrer">
+                            <img src="/public/images/contacts_btn/vk.png" alt="vk">
+                        </a>
+                        <a href="https://www.youtube.com/user/PunkPornofilmi" target="_blank" rel="noopener noreferrer">
+                            <img src="/public/images/contacts_btn/yt.png" alt="yt">
+                        </a>
+                        <a href="https://twitter.com/pornopunk_ru" target="_blank" rel="noopener noreferrer">
+                            <img src="/public/images/contacts_btn/tw.png" alt="tw">
+                        </a>
+                        <a href="https://soundcloud.com/pornopunk" target="_blank" rel="noopener noreferrer">
+                            <img src="/public/images/contacts_btn/sc.png" alt="sc">
+                        </a>
+                    </div>
+                </div>
+            </main>
         </div>
-
-    </main>
-    <footer class="page-footer text-center text-md-left mt-1 pt-4">
+    </div>
+    <footer class="page-footer text-center text-md-left mt-1 pt-4 sizer">
         <div class="text-center">© 2019 Фан сайт гурту Порнофильмы. Жодні права не захищені.</div>
     </footer>
 
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/js/mdb.min.js"></script>
 

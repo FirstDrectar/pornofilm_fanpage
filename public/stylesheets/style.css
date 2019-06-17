@@ -23,6 +23,9 @@
   .btn {
       background-color: #000000;
   }
+  .body-test{
+    text-align: center;
+  }
   .btn:hover{
       color:white;
       background-color: #212121;
@@ -70,7 +73,10 @@
   }
   @media screen and (max-width: 1280px) {
     .logo{
-        width: 30%;
+        width: 20%;
+    }
+    .about{
+      margin-top: 10%;
     }
     .about-text{
         margin-left: 25%;
