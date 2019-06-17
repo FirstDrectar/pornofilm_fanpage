@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ua">
+
+<%-include ./partial/head.ejs%>
+
+<body class="bg-dark" style="height: 100%">
+    <div style="min-height: 100%">
+        <header>
+            <%-include ./partial/nav.ejs%>
+        </header>
+        <main class="body-test">
+            <section class="booking about text-white">
+                <div class="intro">
+                    <h1>БЛИЖАЙШИЕ КОНЦЕРТЫ</h1>
+                    <div class="offset-4 col-md-4">
+                        <p> Друзья! Доводим до вашего сведения, что только те концертные даты, которые вы видите на
+                            этом
+                            сайте, являются окончательно подтвержденными.
+                            Это означает, что:
+                            — Концерт состоится на 95%. Причиной отмены концерта в этом случае могут служить лишь
+                            обстоятельства непреодолимой силы.
+                            — Любой концерт «ПОРНОФИЛЬМОВ», анонсируемый (и даже усиленно рекламируемый) в вашем
+                            городе,
+                            не может считаться официально подтвержденным до тех пор, пока его дата не появится на
+                            официальном сайте группы.
+                            Будьте внимательны.
+                        </p>
+                    </div>
+                </div>
+
+                <table class="table text-white">
+                    <thead class="black  ">
+                        <tr>
+                            <th>Дата</th>
+                            <th>Місто</th>
+                            <th>Місце</th>
+                            <th>Купуй</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>12 июля 2019 , ПТ</th>
+                            <td>Ярославль</td>
+                            <td>Фестиваль Доброфест</td>
+                            <td><button type="button" id="dobrofest" class="btn ">Купити</button></td>
+
+                        </tr>
+                        <tr>
+                            <th>14 июля 2019 , ВС</th>
+                            <td>Киев</td>
+                            <td>Фестиваль Atlas Weekend</td>
+                            <td><button type="button" id="atlas" class="btn">Купити</button></td>
+                        </tr>
+                        <tr>
+                            <th>19 июля 2019 , ПТ </th>
+                            <td> Лагуново</td>
+                            <td>Фестиваль Улетай</td>
+                            <td><button type="button" id="yletay" class="btn ">Купити</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="front-end/ticket.js"></script>
+    <%-include ./partial/footer.ejs%>
+    <%-include ./partial/scripts.ejs%>
+
+</body>
+
+</html>

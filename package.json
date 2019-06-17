@@ -4,11 +4,25 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://Vitason@bitbucket.org/Vitason/epam_project.git"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.6.1",
+    "express": "~4.16.1",
+    "firebase": "^6.0.2",
+    "firebase-admin": "^7.3.0",
+    "html-minifier": "^4.0.0",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.0",
+    "uuid": "^3.3.2"
   },
   "author": "Vitas",
   "license": "ISC",

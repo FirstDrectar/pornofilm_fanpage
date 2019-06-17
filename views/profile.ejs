@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ua">
+
+<%-include ./partial/head.ejs%>
+
+<body class="bg-dark" style="height: 100%">
+    <div style="min-height: 100%">
+        <header>
+            <%-include ./partial/nav.ejs%>
+        </header>
+
+        <main class="text-white about offset-sm-2 col-sm-8 offset-md-3 col-md-6 offset-lg-4 col-lg-4 align-middle">
+            <div style="text-align:center">
+                    <h1>Ваші квитки</h1>
+                    <table class="table text-white">
+                            <thead class="black  ">
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Місто</th>
+                                    <th>Місце</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for( ticket of user.tickets) { %>
+                                <tr>
+                                    <th><%=ticket.date%></th>
+                                    <td><%=ticket.city%></td>
+                                    <td><%=ticket.name%></td>
+                                </tr>
+                                 <% } %>
+                            </tbody>
+                        </table>
+            </div>
+        </main>
+    </div>
+    <%-include ./partial/footer.ejs%>
+    <%-include ./partial/scripts.ejs%>
+
+</body>
+
+</html>
