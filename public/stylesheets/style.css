@@ -137,7 +137,9 @@
   .thumbnail:hover {
     transform: scale(1.5);
   }
-  
+  .login-form{
+    box-shadow: 0px 0px 12px 10px #908b8b; 
+  }
   table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
 table.dataTable thead .sorting_asc:after,
