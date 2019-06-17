@@ -9,7 +9,7 @@ const PARTIAL = 5;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+const ServerPort = require('./config');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -157,8 +157,8 @@ app.get('/logout', function (req, res) {
     AuthUser = null;
     res.redirect("/");
 });
-app.listen(3000, function () {
-    console.log('App listening on port 3000!');
+app.listen(ServerPort, function () {
+    console.log(`App listening on port ${ServerPort}!`);
 });
 
 
