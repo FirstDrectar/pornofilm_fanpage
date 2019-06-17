@@ -4,12 +4,14 @@
 .navbar {
     background-color: black;
   }
+  body{
+    display: flex;
+    flex-direction: column;
+  }
   html,
-  body,
-  .view {
+  body {
     height: 100%;
   }
-  /* Carousel*/
   
   .carousel,
   .carousel-item,
@@ -31,34 +33,11 @@
       background-color: #212121;
   }
 
-
-
   .my-main{
     overflow: auto;
     padding-bottom: 60px;
   }
-  .sizer{
-    position: relative;;
-    margin-top: -60px;
-    clear: both;
-    height:60px;   /* Height of the footer */
- 
-  }
-
-
-
-
-
-  /* Chart.js */
- 
-  @-webkit-keyframes chartjs-render-animation {
-    from {
-      opacity: 0.99
-    }
-    to {
-      opacity: 1
-    }
-  }
+  
   .about{
       margin-top: 5%;
   }
@@ -72,6 +51,7 @@
 
   }
   @media screen and (max-width: 1280px) {
+    
     .logo{
         width: 20%;
     }
@@ -88,48 +68,43 @@
     }
   }
   @media screen and (max-width: 760px) {
+    .about{
+      margin-top:25%;
+    }
     .about-text{
         margin-left: 7.5%;
         max-width: 85%
       }
+      .about-photo{
+        width: 90%;
+        }
+      
   }
-  @keyframes chartjs-render-animation {
-    from {
-      opacity: 0.99
-    }
-    to {
-      opacity: 1
-    }
-  }
+  
   footer{
       background-color:#000000;
   }
- 
+  .nizkiy-flex{
+    flex-grow: 1;
+  }
    .media {
       height: 300px;
-      padding: 10% 10% 10% 10%;
+      max-width: 100%;
+      object-fit:cover;
   }
   .media-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 10px;
+    justify-items: center;
       margin:  2% 2% 2% 2%;
   }
-  .chartjs-render-monitor {
-    -webkit-animation: chartjs-render-animation 0.001s;
-    animation: chartjs-render-animation 0.001s;
-  }
   
-  .card img {
-    display: block;
-    height: 500px !important;
-    margin: 0 auto;
-  }
   
-  .dummy {
-    margin-top: 100%;
-  }
+ 
+  
   
   .thumbnail {
-    position: absolute;
-    bottom: 0;
     transition: all 0.4s ease;
     text-align: center;
   }
@@ -154,157 +129,3 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .bookTitle {
-    transition: all .5s;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-transform: uppercase;
-    color: white;
-    font-family: GothamProBold;
-    font-size: 1.6em
-  }
-  
-  .bookAuthor {
-    transition: all .5s;
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    color: white;
-    font-family: GothamPro;
-    font-size: 1.5em
-  }
-  
-  @media screen and (max-width: 850px) {
-    .bookTitle {
-      font-size: 1.4em
-    }
-    .bookAuthor {
-      font-size: 1.3em
-    }
-  }
-  
-  @media screen and (max-width: 760px) {
-    .bookTitle {
-      font-size: 1.2em
-    }
-    .bookAuthor {
-      font-size: 1.0em
-    }
-  }
-  
-  @media screen and (max-width: 680px) {
-    .bookTitle {
-      font-size: 1.4em
-    }
-    .bookAuthor {
-      font-size: 1.2em
-    }
-  }
-  
-  @media screen and (max-width: 550px) {
-    .bookTitle {
-      font-size: 1.2em
-    }
-    .bookAuthor {
-      font-size: 1.0em
-    }
-  }
-  
-  @media screen and (max-width: 400px) {
-    .bookTitle {
-      font-size: 1.0em;
-      line-height: 1.0em
-    }
-    .bookAuthor {
-      font-size: 0.8em
-    }
-  }
-  
-  .books {
-    background: #c9cfdd;
-  }
-  
-  .inActive {
-    text-align: center;
-    font-size: 1.4em;
-    font-style: oblique;
-    font-weight: bold;
-    color: #c9cfdd
-  }
-  
-  .inActive .text {
-    background-color: #6e655e;
-    border-radius: 5px;
-    opacity: 0.5;
-    filter: alpha(opacity=30);
-  }
-  .btn-rounded {
-    border-radius: 10em;
-  }
-  .opacity{
-    background-color: #6e655e;
-    opacity: 0.9;
-    border-radius: 5px;
-    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 1);
-  
-  }
-  
-  .prettyLink{
-    text-decoration: none;
-    color: #34456a;
-  }
-  .prettyLink:hover{
-    color: #34456a;
-  }
-  .btn-sm-round
-  {
-    border-radius: 5px;
-  }
-  
-  
-  
-  

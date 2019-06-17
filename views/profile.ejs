@@ -4,7 +4,7 @@
 <%-include ./partial/head.ejs%>
 
 <body class="bg-dark" style="height: 100%">
-    <div style="min-height: 100%">
+    <div class="nizkiy-flex">
         <header>
             <%-include ./partial/nav.ejs%>
         </header>
@@ -20,8 +20,8 @@
                                     <th>Місце</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <% for( ticket of user.tickets) { %>
+                            <tbody id="paginationList">
+                                <% for( ticket of tickets ) { %>
                                 <tr>
                                     <th><%=ticket.date%></th>
                                     <td><%=ticket.city%></td>
@@ -31,9 +31,23 @@
                             </tbody>
                         </table>
             </div>
+            <nav aria-label="Page navigation example">
+  <div class="d-flex justify-content-between">
+    <button type="button" id="prev" class="btn" disabled>Попередня</button>
+    <p>page <label id="page"> <%=currPage%> </label> of <label id="maxpage"><%=maxPage%></label> </p>
+    <%if(currPage==maxPage){ %>
+    <button type="button" id="next" class="btn" disabled>Наступна</button>
+   <% } else { %>
+    <button type="button" id="next" class="btn" >Наступна</button>
+    <% } %>
+ </div>
+</nav>
         </main>
     </div>
+
     <%-include ./partial/footer.ejs%>
+    <script type="text/javascript" src="front-end/pagination.js"></script>
+    <script type="text/javascript" src="front-end/ejs.js"></script>
     <%-include ./partial/scripts.ejs%>
 
 </body>

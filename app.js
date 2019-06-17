@@ -5,7 +5,7 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let AuthUser = null;
 let app = express();
-
+const PARTIAL = 5;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -56,19 +56,21 @@ app.get('/music', (req, res, next) => {
     });
 })
 app.get('/profile', (req, res, next) => {
-    res.render("profile", {
-        user: AuthUser
-    });
-})
-app.get('/login', function (req, res) {
-    if (!app.AuthUser)
-        res.render('login', {
-            user: AuthUser
+    if (AuthUser) {
+        console.log(AuthUser.tickets.length);
+        let pages = AuthUser.tickets.length / PARTIAL;
+        res.render("profile", {
+            user: AuthUser,
+            tickets: AuthUser.tickets.slice(0, PARTIAL),
+            currPage: 1,
+            maxPage: (pages == 0) ? 0 : (Math.ceil(pages) - 1 == 0 ? 1 : Math.ceil(pages) - 1)
         });
-    else {
+    } else {
         res.redirect('/');
     }
-});
+})
+
+
 app.get('/api/ticket', (req, res, next) => {
     if (AuthUser && req.query.name) {
         switch (req.query.name) {
@@ -91,7 +93,41 @@ app.get('/api/ticket', (req, res, next) => {
             }); break;
         }
         console.log(AuthUser.tickets);
-        res.send(AuthUser.tickets[AuthUser.tickets.lenght-1]);
+        res.send(AuthUser.tickets[AuthUser.tickets.lenght - 1]);
+    } else {
+        res.send({ err: 'Unauthorized user ' })
+    }
+});
+app.get('/api/pagination', (req, res, next) => {
+    if (AuthUser && req.query.page) {
+        const page = parseInt(req.query.page);
+        const pages = AuthUser.tickets.length / PARTIAL;
+        if (pages < page || page <= 0)
+            return res.send({
+                user: AuthUser,
+                tickets: [],
+                str: "",
+                currPage: page,
+                maxPage: (pages == 0) ? 0 : Math.ceil(pages) - 1,
+            });
+
+        else {
+            let result = [];
+            let idCounter = 0;
+            for (let i = page * PARTIAL; i < AuthUser.tickets.length && idCounter < PARTIAL; i++) {
+                const item = AuthUser.tickets[i];
+                result.push(item);
+                ++idCounter;
+            }
+            return res.send({
+                user: AuthUser,
+                tickets: result,
+                str: "",
+                currPage: page,
+                maxPage: (pages == 0) ? 0 : Math.ceil(pages) - 1,
+            });
+        }
+
     } else {
         res.send({ err: 'Unauthorized user ' })
     }
@@ -103,7 +139,11 @@ app.post('/login', function (req, res) {
             password: "vitas1",
             tickets: new Array()
         };
-
+        AuthUser.tickets.push({
+            name: "Фестиваль Улетай",
+            city: "Лагуново",
+            date: "19 июля 2019 , ПТ"
+        });
         res.render('index', {
             user: AuthUser
         });
