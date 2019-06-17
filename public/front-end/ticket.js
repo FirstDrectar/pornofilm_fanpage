@@ -8,14 +8,13 @@ y.addEventListener('click', () => {
         if(!data.err){
             alert("Квиток куплено");
         }else{
-            console.log('err');
+            console.log(data.err);
         }
         })
         .catch((err) => {
             console.log(err.message);
 
         });
-       console.log("123"); 
 });
 a.addEventListener('click', () => {
     Promise.resolve(
@@ -24,14 +23,13 @@ a.addEventListener('click', () => {
         if(!data.err){
             alert("Квиток куплено");
         }else{
-            console.log('err');
+            console.log(data.err);
         }
         })
         .catch((err) => {
             console.log(err.message);
 
         });
-       console.log("123"); 
 });
 d.addEventListener('click', () => {
     Promise.resolve(
@@ -40,12 +38,12 @@ d.addEventListener('click', () => {
         if(!data.err){
             alert("Квиток куплено");
         }else{
-            console.log('err');
+            console.log(data.err);
         }
         })
         .catch((err) => {
             console.log(err.message);
 
         });
-       console.log("123"); 
+        
 });

@@ -63,7 +63,7 @@ app.get('/profile', (req, res, next) => {
             user: AuthUser,
             tickets: AuthUser.tickets.slice(0, PARTIAL),
             currPage: 1,
-            maxPage: (pages == 0) ? 0 : (Math.ceil(pages) - 1 == 0 ? 1 : Math.ceil(pages) - 1)
+            maxPage: (pages == 0) ? 0 : (Math.ceil(pages))
         });
     } else {
         res.redirect('/');
@@ -72,6 +72,7 @@ app.get('/profile', (req, res, next) => {
 
 
 app.get('/api/ticket', (req, res, next) => {
+
     if (AuthUser && req.query.name) {
         switch (req.query.name) {
             case "dobrofest": AuthUser.tickets.push({
@@ -93,7 +94,7 @@ app.get('/api/ticket', (req, res, next) => {
             }); break;
         }
         console.log(AuthUser.tickets);
-        res.send(AuthUser.tickets[AuthUser.tickets.lenght - 1]);
+        res.send(JSON.stringify(AuthUser.tickets[AuthUser.tickets.length - 1]));
     } else {
         res.send({ err: 'Unauthorized user ' })
     }
@@ -102,29 +103,32 @@ app.get('/api/pagination', (req, res, next) => {
     if (AuthUser && req.query.page) {
         const page = parseInt(req.query.page);
         const pages = AuthUser.tickets.length / PARTIAL;
-        if (pages < page || page <= 0)
+        console.log(pages  + "   " + page);
+        if (Math.ceil(pages) < parseInt(page) || parseInt(page) <= 0) {
             return res.send({
                 user: AuthUser,
                 tickets: [],
                 str: "",
                 currPage: page,
-                maxPage: (pages == 0) ? 0 : Math.ceil(pages) - 1,
+                maxPage: (pages == 0) ? 0 : Math.ceil(pages),
             });
 
-        else {
-            let result = [];
-            let idCounter = 0;
-            for (let i = page * PARTIAL; i < AuthUser.tickets.length && idCounter < PARTIAL; i++) {
-                const item = AuthUser.tickets[i];
-                result.push(item);
-                ++idCounter;
-            }
+        } else {
+            console.log('test');
+
+            let result = AuthUser.tickets.slice((page - 1) * PARTIAL, page * PARTIAL);
+            // let idCounter = 0;
+            // for (let i = page * PARTIAL; i < AuthUser.tickets.length && idCounter < PARTIAL; i++) {
+            //     const item = AuthUser.tickets[i];
+            //     result.push(item);
+            //     ++idCounter;
+            // }
             return res.send({
                 user: AuthUser,
                 tickets: result,
                 str: "",
                 currPage: page,
-                maxPage: (pages == 0) ? 0 : Math.ceil(pages) - 1,
+                maxPage: (pages == 0) ? 0 : Math.ceil(pages),
             });
         }
 
